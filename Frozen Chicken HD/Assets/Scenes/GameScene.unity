@@ -3595,11 +3595,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 785459507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb714f18a6f8f44bb5adecca2261c14, type: 3}
+  m_Script: {fileID: 11500000, guid: bd9329507535e99489defadb9e37bd27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSatisfaction: 0
-  interactable: {fileID: 0}
+  baseSpeed: 5
+  currentSpeed: 0
+  gravity: -9.81
+  jumpHeight: 3
+  controller: {fileID: 0}
+  groundCheck: {fileID: 0}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  pathFinder: {fileID: 0}
+  gridManager: {fileID: 0}
+  path: []
+  isMoving: 0
 --- !u!4 &785459509
 Transform:
   m_ObjectHideFlags: 0
@@ -3637,23 +3649,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 785459507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ecb8b92459e47844905d26c73b59f2e, type: 3}
+  m_Script: {fileID: 11500000, guid: 32e0f4efcd967694688c52a73b349b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 5
-  currentSpeed: 0
-  gravity: -9.81
-  jumpHeight: 3
-  groundCheck: {fileID: 0}
-  groundDistance: 0.4
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 64
-  controller: {fileID: 0}
-  pathFinder: {fileID: 0}
-  gridManager: {fileID: 0}
-  path: []
-  isMoving: 0
+  maxSatisfaction: 0
+  interactable: {fileID: 0}
 --- !u!1001 &786607500
 PrefabInstance:
   m_ObjectHideFlags: 0
