@@ -20,7 +20,6 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.tag);
        if (other.gameObject.tag == "Player")
         {
             PlayerMovement player = other.gameObject.GetComponent<PlayerMovement>();
