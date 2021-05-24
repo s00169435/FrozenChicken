@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class IInteractable : MonoBehaviour
 {
-    [SerializeField] public float radius = 3f;
-    [SerializeField] Player player;
-    bool canInteract;
+    [SerializeField] protected float radius = 3f;
+    public float Radius { get { return radius; } }
+    protected bool canInteract;
+    public bool CanInteract { get { return canInteract; } }
+    [SerializeField] protected Player player;
 
     private void Start()
     {
-        player = FindObjectOfType<Player>();
     }
-    private void OnDrawGizmos()
+    protected void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
-    public void Update()
+    protected void Update()
     {
-        CheckPlayerBeside();
+        Debug.Log("Hello");
     }
 
     public bool CheckPlayerBeside()
@@ -33,4 +34,9 @@ public class IInteractable : MonoBehaviour
 
         return false;
     }
+
+    public virtual void OnInteract()
+    {
+        Debug.Log("Testing interaction.");
+    } 
 }

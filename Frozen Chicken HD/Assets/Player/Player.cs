@@ -17,11 +17,26 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Interact();
         if (interactable != null)
         {
-            if (Vector3.Distance(transform.position, interactable.transform.position) > interactable.radius)
+            if (Vector3.Distance(transform.position, interactable.transform.position) > interactable.Radius)
             {
                 interactable = null;
+            }
+        }
+    }
+
+    void Interact()
+    {
+        if (Input.GetButtonDown("Interact"))
+        {
+            if (interactable != null)
+            {
+                if (interactable.CanInteract)
+                {
+                    Debug.Log(interactable.gameObject.name);
+                }
             }
         }
     }
