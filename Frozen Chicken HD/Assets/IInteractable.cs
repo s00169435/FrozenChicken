@@ -8,20 +8,24 @@ public class IInteractable : MonoBehaviour
     public float Radius { get { return radius; } }
     protected bool canInteract;
     public bool CanInteract { get { return canInteract; } }
-    [SerializeField] protected Player player;
+    [SerializeField] int satisfactionReward;
+    [SerializeField] protected Player player; 
+    [SerializeField] protected PlayerMovement playerMovement;
+    [SerializeField] GameManager gameManager;
 
     private void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
     }
     protected void OnDrawGizmos()
     {
-        Gizmos.color = Color.yellow;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
     protected void Update()
     {
-        Debug.Log("Hello");
+
     }
 
     public bool CheckPlayerBeside()
@@ -38,5 +42,10 @@ public class IInteractable : MonoBehaviour
     public virtual void OnInteract()
     {
         Debug.Log("Testing interaction.");
-    } 
+    }
+    
+    public void AddSatisfaction()
+    {
+        gameManager.AdjustSatisfaction(satisfactionReward);
+    }
 }
