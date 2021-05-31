@@ -6,7 +6,7 @@ public class IInteractable : MonoBehaviour
 {
     [SerializeField] protected float radius = 3f;
     public float Radius { get { return radius; } }
-    protected bool canInteract;
+    [SerializeField] protected bool canInteract;
     public bool CanInteract { get { return canInteract; } }
     [SerializeField] int satisfactionReward;
     [SerializeField] protected Player player; 
@@ -46,6 +46,7 @@ public class IInteractable : MonoBehaviour
     
     public void AddSatisfaction()
     {
-        gameManager.AdjustSatisfaction(satisfactionReward);
+        Debug.Log("satisfaction value: " + this.satisfactionReward);
+        gameManager.AdjustSatisfaction(this.satisfactionReward);
     }
 }

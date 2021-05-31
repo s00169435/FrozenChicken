@@ -6,10 +6,12 @@ public class Obstacle : MonoBehaviour
 {
     [SerializeField] float speedFactor = 0.5f;
     [SerializeField] float cooldown = 4f;
+    [SerializeField] int frustationValue;
+    [SerializeField] GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -22,8 +24,15 @@ public class Obstacle : MonoBehaviour
     {
        if (other.gameObject.tag == "Player")
         {
+            Debug.Log("Hit player");
             PlayerMovement player = other.gameObject.GetComponent<PlayerMovement>();
+            gameManager.AdjustSatisfaction(-frustationValue);
             StartCoroutine(player.SetSpeed(speedFactor, cooldown));
         }
+    }
+
+    protected virtual void Hinder()
+    {
+
     }
 }

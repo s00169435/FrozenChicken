@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GridManager gridManager;
     [SerializeField] List<Node> path = new List<Node>();
     [SerializeField] bool canMove;
+    [SerializeField] Camera playerCamera;
     public bool CanMove { get => canMove; set => canMove = value; }
 
     Coroutine moveCoroutine;
@@ -27,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        playerCamera.transform.position = new Vector3(transform.position.x, playerCamera.transform.position.y, transform.position.z);
+
         if (Input.GetMouseButtonDown(0))
         {
             if (canMove)
@@ -42,17 +45,17 @@ public class PlayerMovement : MonoBehaviour
                 if (Physics.Raycast(ray, out hit, 3000f, groundMask))
                 {
                     Vector2Int startsCoords = gridManager.GetCoordinatesFromPosition(transform.position);
-                    Vector2Int tileCoords = gridManager.GetCoordinatesFromPosition(hit.collider.transform.position);
-                    pathFinder.SetNodes(startsCoords, tileCoords);
+                    Vector2Int endCoords = gridManager.GetCoordinatesFromPosition(hit.collider.transform.position);
+                    pathFinder.SetNodes(startsCoords, endCoords);
                     pathFinder.StartCoords = startsCoords;
-                    pathFinder.DestinationCoords = tileCoords;
+                    pathFinder.DestinationCoords = endCoords;
                     path = pathFinder.GetNewPath(startsCoords);
 
                     Tile tile = hit.transform.parent.GetComponent<Tile>();
 
                     if (tile && path.Count > 1)
                     {
-                        StartCoroutine(FollowPath());
+                        moveCoroutine = StartCoroutine(FollowPath());
                     }
                 }
             }

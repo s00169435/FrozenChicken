@@ -29,15 +29,16 @@ public class Computer : IInteractable
     {
         Debug.Log("Playing game.");
         float time = 0f;
+        playerMovement.CanMove = false;
 
         while (time < playTime)
         {
             time += Time.deltaTime;
-            playerMovement.CanMove = false;
             yield return new WaitForEndOfFrame();
         }
 
         this.AddSatisfaction();
+        player.isInteracting = false;
         playerMovement.CanMove = true;
     }
 }

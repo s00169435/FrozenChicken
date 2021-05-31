@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Slider timerSlider;
     [SerializeField] Gradient timerGradient;
     [SerializeField] Image timerFIll;
+    [SerializeField] Text txtTime;
     public int CurrentSatisfaction { get { return currentSatisfaction; } }
     // Start is called before the first frame update
     void Awake()
@@ -52,6 +53,8 @@ public class GameManager : MonoBehaviour
         currentSatisfaction += val;
         if (currentSatisfaction > maxSatisfaction)
             currentSatisfaction = maxSatisfaction;
+        else if (currentSatisfaction < 0)
+            currentSatisfaction = 0;
 
         satisfactionSlider.value = currentSatisfaction;
     }
@@ -59,7 +62,12 @@ public class GameManager : MonoBehaviour
     void CountDown()
     {
         currentTime -= Time.deltaTime;
+
+        TimeSpan test = TimeSpan.FromSeconds(currentTime);
+        txtTime.text = string.Format("{0:00}:{1:00}", (int)test.TotalMinutes, test.Seconds);
         timerSlider.value = currentTime;
         timerFIll.color = timerGradient.Evaluate(timerSlider.normalizedValue);
     }
+
+
 }

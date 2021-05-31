@@ -6,6 +6,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public IInteractable interactable;
+    [SerializeField] bool isFrustrated;
+    [SerializeField] public bool isInteracting;
     // Start is called before the first frame update
     void Awake()
     {
@@ -31,9 +33,10 @@ public class Player : MonoBehaviour
         {
             if (interactable != null)
             {
-                Debug.Log("Interacting with " + interactable.name);
-                if (interactable.CanInteract)
+                if (interactable.CanInteract == true && !isInteracting)
                 {
+                    isInteracting = true;
+                    Debug.Log("Interacting with " + interactable.name);
                     interactable.OnInteract();
                 }
             }
