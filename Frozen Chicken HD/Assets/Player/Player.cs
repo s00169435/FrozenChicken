@@ -33,9 +33,8 @@ public class Player : MonoBehaviour
         {
             if (interactable != null)
             {
-                if (interactable.CanInteract == true && !isInteracting)
+                if (interactable.CanInteract == true)
                 {
-                    isInteracting = true;
                     Debug.Log("Interacting with " + interactable.name);
                     interactable.OnInteract();
                 }

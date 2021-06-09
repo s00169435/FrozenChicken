@@ -5,7 +5,7 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
     [SerializeField] Vector2 gridSize;
-    Dictionary<Vector2Int, Node> grid = new Dictionary<Vector2Int, Node>();
+     Dictionary<Vector2Int, Node> grid = new Dictionary<Vector2Int, Node>();
     public Dictionary<Vector2Int, Node> Grid { get { return grid; } }
     [SerializeField] int unityGridSize = 10;
     // Start is called before the first frame update

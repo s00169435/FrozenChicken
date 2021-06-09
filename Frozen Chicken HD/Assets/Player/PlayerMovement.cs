@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GridManager gridManager;
     [SerializeField] List<Node> path = new List<Node>();
     [SerializeField] bool canMove;
-    [SerializeField] Camera playerCamera;
+    [SerializeField] Transform characterTransform;
     public bool CanMove { get => canMove; set => canMove = value; }
 
     Coroutine moveCoroutine;
@@ -28,8 +28,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        playerCamera.transform.position = new Vector3(transform.position.x, playerCamera.transform.position.y, transform.position.z);
-
         if (Input.GetMouseButtonDown(0))
         {
             if (canMove)
@@ -44,19 +42,17 @@ public class PlayerMovement : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit, 3000f, groundMask))
                 {
-                    Vector2Int startsCoords = gridManager.GetCoordinatesFromPosition(transform.position);
-                    Vector2Int endCoords = gridManager.GetCoordinatesFromPosition(hit.collider.transform.position);
-                    pathFinder.SetNodes(startsCoords, endCoords);
-                    pathFinder.StartCoords = startsCoords;
-                    pathFinder.DestinationCoords = endCoords;
-                    path = pathFinder.GetNewPath(startsCoords);
-
                     Tile tile = hit.transform.parent.GetComponent<Tile>();
 
+                    Vector2Int startsCoords = gridManager.GetCoordinatesFromPosition(transform.position);
+                    Vector2Int destinationCoords = gridManager.GetCoordinatesFromPosition(hit.collider.transform.position);
+
+                    pathFinder.SetNodes(startsCoords, destinationCoords);
+                    path = pathFinder.GetNewPath();
+
+
                     if (tile && path.Count > 1)
-                    {
                         moveCoroutine = StartCoroutine(FollowPath());
-                    }
                 }
             }
 
@@ -74,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
             float travelPercent = 0f;
 
-            transform.LookAt(endPosition);
+            characterTransform.LookAt(endPosition);
 
             while (travelPercent < 1f)
             {

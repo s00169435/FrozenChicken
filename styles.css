@@ -1,5 +1,53 @@
 body {
     margin: 0;
-    background: pink;
+    background: rgb(221, 169, 27);
     text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #eca200;
+    border-collapse:collapse;
+  }
+  
+li {
+    float: left;
+    border-right: dashed 3px lawngreen;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    color: #c20bb3;
+    background-color: aqua;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+li a:hover {
+    background-color:thistle;
+}
+
+.blogHeading {
+    font-size: 34px;
+    margin-left: 15px;
+    display: block;
+    text-align: left;
+}
+
+p {
+    display: block;
+    font-size: 20px;
+}
+
+.post {
+    width: 70%;
+    border-radius: 30px;
+    margin: 20px;
+    border: dashed 3px aqua;
 }

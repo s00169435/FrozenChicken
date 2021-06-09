@@ -23,16 +23,16 @@ public class Obstacle : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
        if (other.gameObject.tag == "Player")
-        {
-            Debug.Log("Hit player");
-            PlayerMovement player = other.gameObject.GetComponent<PlayerMovement>();
-            gameManager.AdjustSatisfaction(-frustationValue);
-            StartCoroutine(player.SetSpeed(speedFactor, cooldown));
-        }
+       {
+            Hinder(other);
+       }
     }
 
-    protected virtual void Hinder()
+    protected virtual void Hinder(Collider other)
     {
-
+        Debug.Log("Hit player");
+        PlayerMovement player = other.gameObject.GetComponent<PlayerMovement>();
+        gameManager.AdjustSatisfaction(-frustationValue);
+        StartCoroutine(player.SetSpeed(speedFactor, cooldown));
     }
 }

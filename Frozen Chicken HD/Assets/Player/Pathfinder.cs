@@ -31,12 +31,12 @@ public class Pathfinder : MonoBehaviour
         void Awake()
         {
             gridManager = FindObjectOfType<GridManager>();
+            grid = gridManager.Grid;
 
         }
 
         public void SetNodes(Vector2Int startCoords, Vector2Int destinationCoords)
         {
-            grid = gridManager.Grid;
             this.startCoords = startCoords;
             this.destinationCoords = destinationCoords;
             startNode = grid[startCoords];
@@ -56,8 +56,11 @@ public class Pathfinder : MonoBehaviour
 
         void BreathFirstSearch(Vector2Int coords)
         {
-            startNode.isWalkable = true;
-            destinationNode.isWalkable = true;
+            if (!destinationNode.isWalkable)
+                return;
+
+            //startNode.isWalkable = true;
+            //destinationNode.isWalkable = true;
 
             frontier.Clear();
             reached.Clear();
