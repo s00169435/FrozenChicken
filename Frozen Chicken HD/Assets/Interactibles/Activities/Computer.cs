@@ -6,12 +6,6 @@ public class Computer : Activity
 {
     [SerializeField] float playTime;
     Coroutine CoroutPlay;
-    // Start is called before the first frame update
-
-    /* new void Update()
-    {
-        CheckPlayerBeside();
-    } */
 
     public override void OnInteract()
     {

@@ -9,7 +9,6 @@ public class Chore : IInteractable
     [SerializeField] protected int satisfactionReq;
     [SerializeField] protected Coroutine CoroutChore;
 
-    // Start is called before the first frame update
     new void Start()
     {
         base.Start();

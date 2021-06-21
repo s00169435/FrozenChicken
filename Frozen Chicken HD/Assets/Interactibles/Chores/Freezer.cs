@@ -4,17 +4,9 @@ using UnityEngine;
 
 public class Freezer : Chore
 {
-    // Start is called before the first frame update
-
-    // Update is called once per frame
-    /* new void Update()
-    {
-        CheckPlayerBeside();
-    } */
-
     public override void OnInteract()
     {
-        if (gameManager.CurrentSatisfaction <= this.satisfactionReq)
+        if (gameManager.CurrentSatisfaction >= this.satisfactionReq)
         {
             this.canInteract = false;
 

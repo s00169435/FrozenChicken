@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background: rgb(221, 169, 27);
+    background: rgb(10, 240, 21);
     text-align: center;
 }
 
@@ -15,7 +15,7 @@ ul {
   
 li {
     float: left;
-    border-right: dashed 3px lawngreen;
+    border-right: solid 3px lawngreen;
 }
   
 li a {
@@ -50,4 +50,11 @@ p {
     border-radius: 30px;
     margin: 20px;
     border: dashed 3px aqua;
+}
+
+#column {
+    display: block;
+    width: 100%;
+    background-color: red;
+
 }
