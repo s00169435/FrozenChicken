@@ -14,7 +14,7 @@ ul {
     background-color: #eca200;
     border-collapse:collapse;
     position: sticky;
-    top: 20px;
+    top: 0px;
   }
   
 li {
@@ -35,14 +35,13 @@ li a {
 
 #tab {
     position: sticky;
-    top: 20px;
+    top: 50px;
     z-index: 1;
     margin-bottom: 75px;
 }
 .blogPanel {
     width: 60%;
     display: inline-block;
-
 }
 
 .sidePanel {
@@ -50,8 +49,30 @@ li a {
     display: inline-block;
     position: absolute;
     right: 0px;
+    border-left: solid 5px rgb(2, 28, 143);
+    padding-left: 30px;;
 }
 
 .sideImage {
     width: 60%;
+}
+
+.imageScroll {
+    margin-bottom: 100px;
+    border: dashed 5px blue;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.image {
+    width: 30%;
+    display: inline-block;
+    margin: auto;
+}
+
+.imagePanel {
+    max-height: 450px; 
+    position: relative;
+    overflow-y: auto;
+
 }
