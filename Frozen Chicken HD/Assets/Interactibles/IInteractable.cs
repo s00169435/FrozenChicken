@@ -19,7 +19,7 @@ public class IInteractable : MonoBehaviour
 
     protected void SetUpConnections()
     {
-        Debug.Log("Setting up interactables");
+        // Debug.Log("Setting up interactables");
         gameManager = FindObjectOfType<GameManager>();
         player = FindObjectOfType<Player>();
         playerMovement = FindObjectOfType<PlayerMovement>();
