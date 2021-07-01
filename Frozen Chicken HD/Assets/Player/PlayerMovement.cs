@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public bool CanMove { get => canMove; set => canMove = value; }
 
     Coroutine moveCoroutine;
+    [SerializeField] GameObject IndicatorPrefab;
+    GameObject PositionIndicator;
 
     private void Awake()
     {
@@ -32,8 +34,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (canMove)
             {
-                if (moveCoroutine != null)
-                    StopCoroutine(moveCoroutine);
+                StopMoving();
 
                 path.Clear();
 
@@ -52,13 +53,29 @@ public class PlayerMovement : MonoBehaviour
 
 
                     if (tile && path.Count > 1)
+                    {
+                        PositionIndicator = Instantiate(IndicatorPrefab, tile.transform.position, Quaternion.identity);
                         moveCoroutine = StartCoroutine(FollowPath());
+
+                    }
                 }
             }
 
         }
     }
 
+    private void StopMoving()
+    {
+        Destroy(PositionIndicator);
+
+        if (moveCoroutine != null)
+            StopCoroutine(moveCoroutine);
+    }
+
+    private void IndicatePosition()
+    {
+
+    }
     IEnumerator FollowPath()
     {
         for (int i = 1; i < path.Count; i++)

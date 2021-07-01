@@ -14744,6 +14744,7 @@ MonoBehaviour:
   path: []
   canMove: 1
   characterTransform: {fileID: 106215606}
+  IndicatorPrefab: {fileID: 1781490302587607140, guid: 99c3d0bf113d5c74cb6865ecd0a81b5d, type: 3}
 --- !u!4 &785459509
 Transform:
   m_ObjectHideFlags: 0
@@ -19598,7 +19599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9144102500280283106, guid: 96e752313a91fbc41b0b83a69311c6fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 9144102500280283106, guid: 96e752313a91fbc41b0b83a69311c6fd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19606,7 +19607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9144102500280283106, guid: 96e752313a91fbc41b0b83a69311c6fd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 9144102500280283106, guid: 96e752313a91fbc41b0b83a69311c6fd, type: 3}
       propertyPath: m_LocalRotation.w

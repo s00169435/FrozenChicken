@@ -17,6 +17,18 @@
 
     <div style="width: 90%; position: relative; margin: auto;">
         <div class="blogPanel">
+
+            <div class="imageScroll">
+                <i><p>30<sup>th</sup> June 2021</p></i> 
+                <p>A showcase of how the player movement system works. It's triggered by a mouse click on an onoccupied tile. Using the node positions on the selected tile and 
+                    the BreathFirstSearch algorithm, the system will look for the shortest path to that selected tile. I'm gonna later adjust it so that it won't go on tiles that
+                    are marked as "unavailable" and maybe add a little icon above the selected node, so that the player will always know where they are going. The player's speed is 
+                    also affected by obstacles in the way, so they will be slowed down if they're not careful about their movement.
+                </p>
+                <div class="imagePanel">
+                    <a href="/images/PlayerMovement.gif" target="_blank"><img id="playerMovement" class="image" src="/images/PlayerMovement.gif"></a>
+                </div>
+            </div>
             
             <div class="imageScroll">
                 <i><p>29<sup>th</sup> June 2021</p></i> 
@@ -43,6 +55,11 @@
         </div>
 
         <aside class="sidePanel">
+
+            <div>
+                <a href="#playerMovement"><img class="sideImage" src="/images/PlayerMovement.gif"></a>
+                <p>Reference Blog Post</p>
+            </div>
 
             <div>
                 <a href="#dogAI"><img class="sideImage" src="/images/Showcase.png"></a>
