@@ -19,6 +19,19 @@
         <div class="blogPanel">
 
             <div class="imageScroll">
+                <i><p>7<sup>th</sup> July 2021</p></i> 
+                <p>Programmed the dog to poop within a certain interval of time. The poops will slow down the player if 
+                    they come in contact withone another. Need to also fine tune how the poops spawn into the world.
+                    Right now, they spawn at the exact location of the dog at the given moment but I want them to be
+                    situated just above the center of a tile. There's also the chance that multiple poops might spawn on 
+                    top of each other, so I need to check first if there is already a poop on the targeted tile. 
+                </p>
+                <div class="imagePanel">
+                    <a href="/images/DogPoop.gif" target="_blank"><img id="dogPoop" class="image" src="/images/DogPoop.gif"></a>
+                </div>
+            </div>
+
+            <div class="imageScroll">
                 <i><p>30<sup>th</sup> June 2021</p></i> 
                 <p>A showcase of how the player movement system works. It's triggered by a mouse click on an onoccupied tile. Using the node positions on the selected tile and 
                     the BreathFirstSearch algorithm, the system will look for the shortest path to that selected tile. I'm gonna later adjust it so that it won't go on tiles that
@@ -55,6 +68,11 @@
         </div>
 
         <aside class="sidePanel">
+
+            <div>
+                <a href="#dogPoop"><img class="sideImage" src="/images/DogPoop.gif"></a>
+                <p>Reference Blog Post</p>
+            </div>
 
             <div>
                 <a href="#playerMovement"><img class="sideImage" src="/images/PlayerMovement.gif"></a>

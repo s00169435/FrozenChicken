@@ -40,7 +40,10 @@ public class IInteractable : MonoBehaviour
     {
         if (Vector3.Distance(player.transform.position, transform.position) <= radius)
         {
-            player.interactable = this;
+            if (player.interactable == null)
+            {
+                player.interactable = this;
+            }
         }
     }
 

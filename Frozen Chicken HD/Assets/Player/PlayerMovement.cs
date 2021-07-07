@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,8 +20,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject IndicatorPrefab;
     GameObject PositionIndicator;
 
+    [SerializeField] VisualEffectAsset VFXPrefab;
+    VisualEffectAsset VFXInstance;
+
     private void Awake()
     {
+        IndicatorPrefab.SetActive(false);
         pathFinder = FindObjectOfType<Pathfinder>();
         gridManager = FindObjectOfType<GridManager>();
         currentSpeed = baseSpeed;
@@ -35,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
             if (canMove)
             {
                 StopMoving();
-
                 path.Clear();
 
                 RaycastHit hit;
@@ -54,9 +58,11 @@ public class PlayerMovement : MonoBehaviour
 
                     if (tile && path.Count > 1)
                     {
-                        PositionIndicator = Instantiate(IndicatorPrefab, tile.transform.position, Quaternion.identity);
+                        //IndicatorPrefab.SetActive(true);
+                        //IndicatorPrefab.transform.position = tile.transform.position;
+                        VFXInstance = Instantiate(VFXPrefab, tile.transform.position, Quaternion.identity);
                         moveCoroutine = StartCoroutine(FollowPath());
-
+                        Debug.Log("Indicator Prefab name: " + VFXPrefab.name);
                     }
                 }
             }
@@ -66,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void StopMoving()
     {
-        Destroy(PositionIndicator);
+        Destroy(VFXInstance);
 
         if (moveCoroutine != null)
             StopCoroutine(moveCoroutine);

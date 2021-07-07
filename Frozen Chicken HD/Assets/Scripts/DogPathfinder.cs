@@ -44,7 +44,7 @@ public class DogPathfinder : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Starting Coroutine");
+        // Debug.Log("Starting Coroutine");
         CoroutFindPath = StartCoroutine(FindPath());
 
     }
@@ -66,7 +66,7 @@ public class DogPathfinder : MonoBehaviour
             
         CoroutFollowPath = StartCoroutine(FollowPath());
 
-        Debug.Log("Breaking out of coroutine");
+        // Debug.Log("Breaking out of coroutine");
     }
 
     public void SetNodes(Vector2Int startCoords)
@@ -74,17 +74,17 @@ public class DogPathfinder : MonoBehaviour
         this.startCoords = startCoords;
         int randomX = Random.Range(startCoords.x - 3, startCoords.x + 3);
         int randomY = Random.Range(startCoords.y - 3, startCoords.y + 3);
-        Debug.Log("First Random: " + randomX);
-        Debug.Log("Second Random: " + randomY);
+        // Debug.Log("First Random: " + randomX);
+        // Debug.Log("Second Random: " + randomY);
         this.destinationCoords = startCoords + new Vector2Int(randomX, randomY);
 
         while (!grid.ContainsKey(destinationCoords))
         {
-            Debug.Log("Grid Doesn't Contain Coords: " + destinationCoords);
+            // Debug.Log("Grid Doesn't Contain Coords: " + destinationCoords);
             this.destinationCoords = startCoords + new Vector2Int(Random.Range(-3, 3), Random.Range(-3, 3));
         }
 
-        Debug.Log("Grid Destination Coords: " + destinationCoords);
+        // Debug.Log("Grid Destination Coords: " + destinationCoords);
         startNode = grid[startCoords];
         destinationNode = grid[destinationCoords];
     }
@@ -94,7 +94,7 @@ public class DogPathfinder : MonoBehaviour
 
         for (int i = 1; i < path.Count; i++)
         {
-            Debug.Log("Following path tile " + i);
+            // Debug.Log("Following path tile " + i);
 
             Vector3 startPosition = transform.position;
             Vector3 endPosition = gridManager.GetPositionFromCoordinates(path[i].coordinates);
