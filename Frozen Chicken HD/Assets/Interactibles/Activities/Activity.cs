@@ -11,7 +11,7 @@ public class Activity : IInteractable
         base.Start();
     }
 
-    new void  Update()
+    new void Update()
     {
         CheckPlayerBeside();
     }

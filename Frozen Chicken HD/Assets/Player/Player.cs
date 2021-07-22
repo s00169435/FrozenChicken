@@ -5,34 +5,73 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public IInteractable interactable;
-    [SerializeField] bool isFrustrated;
+    public PlayerMovement playerMovement
+        ;
+    public IInteractable Interactable;
+    public Obstacle Obstacle;
     [SerializeField] public bool isInteracting;
+    [SerializeField] private GameObject PlayerArm;
+    bool hasBroom;
+    public bool HasBroom { get { return hasBroom; }  set { hasBroom = value; } }
+    public GameObject playerArm { get => PlayerArm; }
+
+    private void Start()
+    {
+        this.playerMovement = FindObjectOfType<PlayerMovement>();
+    }
 
     void Update()
     {
-        Interact();
-        if (interactable != null)
+        CheckInteractableRange();
+        CheckObstacleRange();
+        if (Input.GetButtonDown("Interact"))
         {
-            if (Vector3.Distance(transform.position, interactable.transform.position) > interactable.Radius)
-            {
-                interactable = null;
-            }
+            Interact();
         }
+        else if (Input.GetButtonDown("Use"))
+        {
+            CleanUp();
+        }
+    }
+
+    private void CheckInteractableRange()
+    {
+        if (Interactable != null)
+            if (Vector3.Distance(transform.position, Interactable.transform.position) > Interactable.Radius)
+                Interactable = null;
+    }
+
+    private void CheckObstacleRange()
+    {
+        if (Obstacle != null)
+            if (Vector3.Distance(transform.position, Obstacle.transform.position) > Obstacle.Radius)
+                Obstacle = null;
     }
 
     void Interact()
     {
-        if (Input.GetButtonDown("Interact"))
-        {
-            if (interactable != null)
+        if (Interactable != null)
+            if (Interactable.CanInteract == true)
             {
-                if (interactable.CanInteract == true)
-                {
-                    Debug.Log("Interacting with " + interactable.name);
-                    interactable.OnInteract();
-                }
+                Debug.Log("Interacting with " + Interactable.name);
+                Interactable.OnInteract();
             }
+    }
+
+    void CleanUp()
+    {
+        if (hasBroom && this.Obstacle != null)
+        {
+            Debug.Log("Cleaning poop");
+            this.Obstacle.CleanUp();
+        }
+        else if (!hasBroom)
+        {
+            Debug.Log("Don't have broom");
+        }
+        else if (this.Obstacle == null)
+        {
+            Debug.Log("Nothing to cleanup");
         }
     }
 }

@@ -18,14 +18,16 @@ public class PlayerMovement : MonoBehaviour
 
     Coroutine moveCoroutine;
     [SerializeField] GameObject IndicatorPrefab;
-    GameObject PositionIndicator;
+    GameObject Indicator;
 
     [SerializeField] VisualEffectAsset VFXPrefab;
     VisualEffectAsset VFXInstance;
+    [SerializeField] bool isFrustrated;
+    public bool IsFrustrated { get => isFrustrated; }
 
     private void Awake()
     {
-        IndicatorPrefab.SetActive(false);
+        IndicatorPrefab.SetActive(true);
         pathFinder = FindObjectOfType<Pathfinder>();
         gridManager = FindObjectOfType<GridManager>();
         currentSpeed = baseSpeed;
@@ -58,11 +60,11 @@ public class PlayerMovement : MonoBehaviour
 
                     if (tile && path.Count > 1)
                     {
-                        //IndicatorPrefab.SetActive(true);
-                        //IndicatorPrefab.transform.position = tile.transform.position;
-                        VFXInstance = Instantiate(VFXPrefab, tile.transform.position, Quaternion.identity);
+                        IndicatorPrefab.SetActive(true);
+                        IndicatorPrefab.transform.position = tile.transform.position;
+                        // VFXInstance = Instantiate(VFXPrefab, tile.transform.position, Quaternion.identity);
                         moveCoroutine = StartCoroutine(FollowPath());
-                        Debug.Log("Indicator Prefab name: " + VFXPrefab.name);
+                        // Debug.Log("Indicator Prefab name: " + VFXPrefab.name);
                     }
                 }
             }
@@ -72,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void StopMoving()
     {
-        Destroy(VFXInstance);
+        IndicatorPrefab.SetActive(false);
 
         if (moveCoroutine != null)
             StopCoroutine(moveCoroutine);
@@ -103,13 +105,16 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+
+        IndicatorPrefab.SetActive(false);
     }
 
     public IEnumerator SetSpeed(float speedFactor, float cooldown)
     {
+        isFrustrated = true;
         Debug.Log("Stopping speed coroutine");
         StopCoroutine("SetSpeed");
-        Debug.Log("Starting speed coroutine");
+        Debug.Log("Walk speed slowed");
         float timer = 0f;
         while (timer < cooldown)
         {
@@ -118,7 +123,8 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        Debug.Log("Coroutine ended");
+        isFrustrated = false;
+        Debug.Log("Can walk normally");
         currentSpeed = baseSpeed;
     }
 }
