@@ -1,18 +1,17 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public PlayerMovement playerMovement
-        ;
-    public IInteractable Interactable;
-    public Obstacle Obstacle;
+    public PlayerMovement playerMovement;
+    public IInteractable interactable;
+    public CarryAround carryAround;
+    public Activity activity;
+    public Chore chore;
+    public Obstacle obstacle;
+
     [SerializeField] public bool isInteracting;
     [SerializeField] private GameObject PlayerArm;
-    bool hasBroom;
-    public bool HasBroom { get { return hasBroom; }  set { hasBroom = value; } }
+    [SerializeField] public GameObject PlayerBody;
     public GameObject playerArm { get => PlayerArm; }
 
     private void Start()
@@ -22,56 +21,71 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        CheckInteractableRange();
-        CheckObstacleRange();
+        // CheckInteractableRange();
+        CheckRange();
         if (Input.GetButtonDown("Interact"))
         {
             Interact();
         }
         else if (Input.GetButtonDown("Use"))
         {
-            CleanUp();
+            UseItem();
         }
     }
 
-    private void CheckInteractableRange()
+    private void CheckRange()
     {
-        if (Interactable != null)
-            if (Vector3.Distance(transform.position, Interactable.transform.position) > Interactable.Radius)
-                Interactable = null;
+        CheckChoreRange();
+        CheckActivityRange();
+        CheckObstacleRange();
+        CheckActivityRange();
+        CheckCarryAroundRange();
     }
 
     private void CheckObstacleRange()
     {
-        if (Obstacle != null)
-            if (Vector3.Distance(transform.position, Obstacle.transform.position) > Obstacle.Radius)
-                Obstacle = null;
+        if (obstacle != null)
+            if (Vector3.Distance(transform.position, obstacle.transform.position) > obstacle.Radius)
+                obstacle = null;
+    }
+
+    private void CheckActivityRange()
+    {
+        if (activity != null)
+            if (Vector3.Distance(transform.position, activity.transform.position) > activity.Radius)
+                activity = null;
+    }
+
+    private void CheckCarryAroundRange()
+    {
+        if (carryAround != null)
+            if (Vector3.Distance(transform.position, carryAround.transform.position) > carryAround.Radius)
+                carryAround = null;
+    }
+
+    private void CheckChoreRange()
+    {
+        if (chore != null)
+            if (Vector3.Distance(transform.position, chore.transform.position) > chore.Radius)
+                chore = null;
     }
 
     void Interact()
     {
-        if (Interactable != null)
-            if (Interactable.CanInteract == true)
-            {
-                Debug.Log("Interacting with " + Interactable.name);
-                Interactable.OnInteract();
-            }
+        if (activity != null)
+            activity.OnInteract();
+        else if (chore != null)
+            chore.OnInteract();
+        else if (carryAround != null)
+            carryAround.OnInteract(); 
     }
 
-    void CleanUp()
+    void UseItem()
     {
-        if (hasBroom && this.Obstacle != null)
+        if (this.carryAround != null)
         {
-            Debug.Log("Cleaning poop");
-            this.Obstacle.CleanUp();
-        }
-        else if (!hasBroom)
-        {
-            Debug.Log("Don't have broom");
-        }
-        else if (this.Obstacle == null)
-        {
-            Debug.Log("Nothing to cleanup");
+            Debug.Log("Using item");
+            carryAround.OnUse();
         }
     }
 }

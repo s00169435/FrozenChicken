@@ -26,13 +26,9 @@ public class Freezer : Chore
         this.DecreaseSatisfaction();
 
         Debug.Log("Taking out chicken");
-        float timeElapsed = 0f;
-
-        while (timeElapsed < this.choreDuration)
-        {
-            timeElapsed += Time.deltaTime;
-            yield return new WaitForEndOfFrame();
-        }
+        player.playerMovement.CanMove = false;
+        yield return new WaitForSeconds(choreDuration);
+        player.playerMovement.CanMove = true;
 
         Debug.Log("Chore ended");
     }

@@ -5,8 +5,8 @@ using UnityEngine;
 public class CarryAround : IInteractable
 {
     // Start is called before the first frame update
-    protected bool isHeld;
-    [SerializeField] Transform Closet;
+    [SerializeField] protected bool isHeld;
+    [SerializeField] Transform InitialLocation;
     public bool IsHeld { get { return isHeld; } }
     new void Start()
     {
@@ -17,13 +17,25 @@ public class CarryAround : IInteractable
     // Update is called once per frame
     new void Update()
     {
-        CheckPlayerBeside();
+        CheckBeside();
     }
 
     public override void OnInteract()
     {
         Pickup();
     }
+
+    protected override void CheckBeside()
+    {
+        if (Vector3.Distance(player.transform.position, transform.position) <= radius)
+        {
+            if (player.carryAround == null)
+            {
+                player.carryAround = this;
+            }
+        }
+    }
+
 
     public void Pickup()
     {
@@ -32,24 +44,26 @@ public class CarryAround : IInteractable
             isHeld = true;
             transform.position = player.playerArm.transform.position;
             transform.parent = player.playerArm.transform;
-            Debug.Log("Carrying Broom");
         }
         else
         {
             isHeld = false;
-            transform.parent = Closet;
-            transform.position = Closet.position;
-            Debug.Log("Dropping Broom");
+            transform.parent = InitialLocation;
+            transform.position = InitialLocation.position;
         }
-
-        player.HasBroom = isHeld;
     }
 
     public void Setup()
     {
-        transform.parent = Closet;
-        transform.position = Closet.position;
+        transform.parent = InitialLocation;
+        transform.position = InitialLocation.position;
         canInteract = true;
         isHeld = false;
+        Debug.Log("Setting up broom");
+    }
+
+    public virtual void  OnUse()
+    {
+
     }
 }

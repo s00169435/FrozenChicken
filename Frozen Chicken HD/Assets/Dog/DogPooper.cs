@@ -28,20 +28,17 @@ public class DogPooper : MonoBehaviour
 
     IEnumerator Poop()
     {
-        Debug.Log("Entering poop");
         float timeElapsed = 0;
 
         while (timeElapsed < poopCooldown)
         {
             timeElapsed += Time.deltaTime;
-            Debug.Log((int)timeElapsed);
             yield return new WaitForEndOfFrame();
         }
 
         if (poopList.Count < maxPoopCount)
         {
             poopList.Add(Instantiate<Obstacle>(PoopPrefab, tilePosition, Quaternion.identity));
-            Debug.Log("Poops: " + poopList.Count);
         }
 
         if (CoroutPoop != null)

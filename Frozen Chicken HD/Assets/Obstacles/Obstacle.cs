@@ -12,8 +12,9 @@ public class Obstacle : MonoBehaviour
     [SerializeField] protected Player player;
     [SerializeField] protected float radius = 3f;
     public float Radius { get { return radius; } }
+
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         dogPooper = FindObjectOfType<DogPooper>();
         gameManager = FindObjectOfType<GameManager>();
@@ -32,7 +33,7 @@ public class Obstacle : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
        if (other.gameObject.tag == "Player")
        {
@@ -52,9 +53,9 @@ public class Obstacle : MonoBehaviour
     {
         if (Vector3.Distance(player.transform.position, transform.position) <= radius)
         {
-            if (player.Obstacle == null)
+            if (player.obstacle == null)
             {
-                player.Obstacle = this;
+                player.obstacle = this;
             }
         }
     }

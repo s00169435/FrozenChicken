@@ -36,13 +36,17 @@ public class IInteractable : MonoBehaviour
 
     }
 
+    protected virtual void CheckBeside()
+    {
+
+    }
     public void CheckPlayerBeside()
     {
         if (Vector3.Distance(player.transform.position, transform.position) <= radius)
         {
-            if (player.Interactable == null)
+            if (player.interactable == null)
             {
-                player.Interactable = this;
+                player.interactable = this;
             }
         }
     }

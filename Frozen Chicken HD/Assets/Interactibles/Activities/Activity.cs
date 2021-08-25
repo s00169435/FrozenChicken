@@ -13,9 +13,19 @@ public class Activity : IInteractable
 
     new void Update()
     {
-        CheckPlayerBeside();
+        CheckBeside();
     }
 
+    protected override void CheckBeside()
+    {
+        if (Vector3.Distance(player.transform.position, transform.position) <= radius)
+        {
+            if (player.activity == null)
+            {
+                player.activity = this;
+            }
+        }
+    }
     public void IncreaseSatisfaction()
     {
         Debug.Log("satisfaction value: " + this.satisfactionReward);

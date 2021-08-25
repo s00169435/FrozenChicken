@@ -44,7 +44,6 @@ public class DogPathfinder : MonoBehaviour
 
     private void Start()
     {
-        // Debug.Log("Starting Coroutine");
         CoroutFindPath = StartCoroutine(FindPath());
 
     }
@@ -91,7 +90,6 @@ public class DogPathfinder : MonoBehaviour
 
     IEnumerator FollowPath()
     {
-
         for (int i = 1; i < path.Count; i++)
         {
             // Debug.Log("Following path tile " + i);
@@ -115,7 +113,7 @@ public class DogPathfinder : MonoBehaviour
         }
 
         int waitTime = Random.Range(3, 7);
-        Debug.Log($"Dog waiting for {waitTime} seconds");
+        // Debug.Log($"Dog waiting for {waitTime} seconds");
         yield return new WaitForSeconds(waitTime);
 
         reached = false;
