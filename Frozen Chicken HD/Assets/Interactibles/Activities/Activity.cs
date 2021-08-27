@@ -34,13 +34,7 @@ public class Activity : IInteractable
 
     protected IEnumerator StartCooldown()
     {
-        float startPoint = 0f;
-
-        while (startPoint < cooldownTime)
-        {
-            startPoint += Time.deltaTime;
-            yield return new WaitForEndOfFrame();
-        }
+        yield return new WaitForSeconds(cooldownTime);
 
         this.canInteract = true;
         Debug.Log($"Can interact with {this.name} again");

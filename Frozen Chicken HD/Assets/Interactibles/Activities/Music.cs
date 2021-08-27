@@ -8,24 +8,30 @@ public class Music : Activity
     [SerializeField] AudioClip song;
     [SerializeField] float songPlayTime;
 
-    private void Start()
+    new void Start()
     {
         base.Start();
         audioSource = GetComponent<AudioSource>();
+        audioSource.Stop();
     }
     public override void OnInteract()
     {
-        base.OnInteract();
+        StartCoroutine(PlayMusic());
     }
 
     IEnumerator PlayMusic()
     {
+        canInteract = false;
         if (!audioSource.isPlaying)
-            audioSource.PlayOneShot(song);
+        {
+            audioSource.time = 20;
+            audioSource.Play();
+        }
+            
 
         yield return new WaitForSeconds(songPlayTime);
 
         audioSource.Stop();
-
+        StartCoroutine(StartCooldown());
     }
 }

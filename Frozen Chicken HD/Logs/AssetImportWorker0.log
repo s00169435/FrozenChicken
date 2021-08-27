@@ -1,0 +1,419 @@
+Using pre-set license
+Built from '2020.2/staging' branch; Version is '2020.2.5f1 (e2c53f129de5) revision 14861631'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1165; Version 2009; 64bit' Language: 'en' Physical Memory: 16333 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.5f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Toroti/source/repos/FrozenChicken/Frozen Chicken HD
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+65408
+Successfully changed project path to: C:/Users/Toroti/source/repos/FrozenChicken/Frozen Chicken HD
+C:/Users/Toroti/source/repos/FrozenChicken/Frozen Chicken HD
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 75.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.5f1 (e2c53f129de5)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Toroti/source/repos/FrozenChicken/Frozen Chicken HD/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 SUPER (ID=0x21c4)
+    Vendor:   
+    VRAM:     5991 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56608
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001749 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 87.96 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.756 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001614 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001AF46581010 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001AF465B1E20 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 83.97 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.305 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.98 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3554 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 173.3 MB.
+System memory in use after: 170.9 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3987.
+Total: 4.880900 ms (FindLiveObjects: 0.610600 ms CreateObjectMapping: 0.130800 ms MarkObjects: 2.554900 ms  DeleteObjects: 1.582000 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Music/BarefootInTheParkWav.wav
+  artifactKey: Guid(df0d6560d3c34e441979058133679b5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/BarefootInTheParkWav.wav using Guid(df0d6560d3c34e441979058133679b5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b8706eea29fe0523fd4328408c089b9') in 0.085402 seconds
+  Import took 0.091807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Music/WaterWoofWav.wav
+  artifactKey: Guid(f534a84830cc2bc4d98e9ee2cd838dc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Music/WaterWoofWav.wav using Guid(f534a84830cc2bc4d98e9ee2cd838dc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1696dabea247991f67253dc83a570f86') in 0.015829 seconds
+  Import took 0.022195 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001610 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001AF49CCE010 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001B0FF487680 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.084 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.7 MB.
+System memory in use after: 162.2 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3998.
+Total: 4.706300 ms (FindLiveObjects: 0.441000 ms CreateObjectMapping: 0.094900 ms MarkObjects: 2.519100 ms  DeleteObjects: 1.633900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001938 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001AF478FCFB0 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001AF48AEC030 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.064 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.7 MB.
+System memory in use after: 162.3 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 4000.
+Total: 4.881400 ms (FindLiveObjects: 0.460700 ms CreateObjectMapping: 0.105400 ms MarkObjects: 2.536000 ms  DeleteObjects: 1.777100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001909 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001AF48A43FE0 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001AF51418540 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.145 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.8 MB.
+System memory in use after: 162.3 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 4002.
+Total: 6.680500 ms (FindLiveObjects: 0.814600 ms CreateObjectMapping: 0.161700 ms MarkObjects: 3.322500 ms  DeleteObjects: 2.376200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001631 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001AF4ED64390 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001AF4E9B8DE0 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.050 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.76 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.8 MB.
+System memory in use after: 162.3 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 4004.
+Total: 6.078800 ms (FindLiveObjects: 0.516800 ms CreateObjectMapping: 0.120800 ms MarkObjects: 3.499400 ms  DeleteObjects: 1.938800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001595 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001AF50760090 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001AF510BE710 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.092 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.94 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.8 MB.
+System memory in use after: 162.3 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 4006.
+Total: 6.561800 ms (FindLiveObjects: 1.003500 ms CreateObjectMapping: 0.193100 ms MarkObjects: 2.699300 ms  DeleteObjects: 2.663000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002306 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001AF48E35650 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001B0FF77C010 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.038 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.13 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.8 MB.
+System memory in use after: 162.3 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 4008.
+Total: 5.285500 ms (FindLiveObjects: 0.421400 ms CreateObjectMapping: 0.102900 ms MarkObjects: 2.548600 ms  DeleteObjects: 2.211000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001643 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001AF480BB040 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001AF4E9B8DF0 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.146 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.8 MB.
+System memory in use after: 162.3 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 4010.
+Total: 5.952200 ms (FindLiveObjects: 0.754600 ms CreateObjectMapping: 0.121400 ms MarkObjects: 2.664800 ms  DeleteObjects: 2.409600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001649 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001AF4ED64390 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001AF4E9B8DF0 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.063 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.8 MB.
+System memory in use after: 162.4 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 4012.
+Total: 5.151600 ms (FindLiveObjects: 0.483900 ms CreateObjectMapping: 0.090900 ms MarkObjects: 2.357500 ms  DeleteObjects: 2.217800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001541 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001AF53764010 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001AF5316E020 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.042 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.8 MB.
+System memory in use after: 162.4 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 4014.
+Total: 6.850600 ms (FindLiveObjects: 0.632900 ms CreateObjectMapping: 0.247000 ms MarkObjects: 3.439600 ms  DeleteObjects: 2.529300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001553 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001AF4EAD4800 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001AF4E9B8DF0 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.082 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.8 MB.
+System memory in use after: 162.4 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 4016.
+Total: 4.942300 ms (FindLiveObjects: 0.474800 ms CreateObjectMapping: 0.097100 ms MarkObjects: 2.318600 ms  DeleteObjects: 2.044400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001559 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001AF53359170 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001AF5316E020 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.062 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.86 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.8 MB.
+System memory in use after: 162.4 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 4018.
+Total: 5.636400 ms (FindLiveObjects: 0.567500 ms CreateObjectMapping: 0.132400 ms MarkObjects: 2.851200 ms  DeleteObjects: 2.083600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001705 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001AF51628020 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\Cinemachine.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001AF5316E020 doesn't match image C:\Users\Toroti\source\repos\FrozenChicken\Frozen Chicken HD\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.050 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.16 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3290 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.8 MB.
+System memory in use after: 162.4 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 4020.
+Total: 5.489000 ms (FindLiveObjects: 0.508000 ms CreateObjectMapping: 0.119200 ms MarkObjects: 2.800300 ms  DeleteObjects: 2.059900 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
